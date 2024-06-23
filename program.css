@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f9fc; /* Light background */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+   
+    background-color: #fffacd ; /* Light beige background for the header */
+    color: #4B0082;
+    width: 100%; /* Ensure the header spans the full width */
+    box-sizing: border-box; /* Include padding in the width */
+}
+.header-logo {
+    height: 60px; /* Adjust the height as needed */
+}
+.header-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4B0082; /* White text color */
+}
+.logo-left, .logo-right {
+    flex: 1;
+    text-align: center;
+}
+.title-container {
+    flex: 2;
+    text-align: center;
+}
+
+
+.date-container {
+    text-align: center;
+    margin: 20px 0;
+}
+.banner-container{
+
+}
+.banner-image{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+.venue-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f6e8; /* Matching the header background */
+    text-align: center;
+    color: #4B0082;
+}
+
+.venue-logo {
+    height: 60px;
+    margin-right: 20px;
+}
+
+.venue-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.event-date {
+    font-size: 24px;
+    color: #4B0082;
+    animation: eyeCatchingAnimation 3s ease-in-out;
+}
+
+.content-section {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+}
+
+.announcement {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.announcement p {
+    margin: 10px 0;
+}
+
+.announcement h2 {
+    color: #FF4500;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.session-list {
+    list-style-type: disc;
+    margin: 10px 0 0 20px;
+    padding-left: 20px;
+}
+
+.session-list li {
+    margin-bottom: 5px;
+}
+
+
+
+.program-section {
+    padding: 40px;
+    background-color: #fff; /* White background */
+    color: #4B0082; /* Indigo text color */
+}
+
+.program-section h2 {
+    color: #FF4500; /* Orange-Red color */
+    margin-bottom: 20px;
+}
+
+.program-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.program-table th, .program-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.program-table th {
+    background-color: #f9f6e8; /* Light beige background */
+    color: #4B0082;
+}
+
+.live-surgery {
+    color: #FF4500;
+    font-weight: bold;
+    text-align: center;
+}
+
+.session-title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.lunch {
+    color: #FF4500;
+    text-align: center;
+}
+.registration-box {
+    position: fixed;
+    top: 80%;
+    right: 10px;
+    transform: translateY(-50%);
+    padding: 20px;
+    background-color: #0000FF; /* Blue background */
+    color: #fff; /* White text color */
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it stays on top */
+}
+.odd{
+    background-color: #f9f6e8 !important;
+}
+
+
+/* Keyframes for the eye-catching animation */
+@keyframes eyeCatchingAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+        color: #4B0082;
+    }
+    25% {
+        opacity: 0.5;
+        transform: scale(1.2) rotate(15deg);
+        color: #FF4500;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(-15deg);
+        color: #32CD32;
+    }
+    75% {
+        opacity: 0.5;
+        transform: scale(1.2) rotate(15deg);
+        color: #FF4500;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        color: #4B0082;
+    }
+}
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items in a column */
+        text-align: center;
+    }
+    .header-title {
+        padding: 20px 0; /* Padding top and bottom */
+    }
+    .content-section, .program-section {
+        padding: 20px;
+    }
+
+    .program-table th, .program-table td {
+        padding: 6px;
+    }
+    .event-date {
+        font-size: 18px;
+    }
+    .venue-text {
+        font-size: 18px;
+    }
+}
+
+/* Increase logo size on desktop */
+@media (min-width: 769px) {
+    .header-logo {
+        height: 80px; /* Increase height for desktop */
+    }
+}
